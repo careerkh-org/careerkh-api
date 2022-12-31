@@ -27,7 +27,7 @@ const config = {
     // 'zh-Hans',
     // 'zh',
   ],
-};
+}; 
 
 const bootstrap = (app) => {
   console.log(app);
