@@ -4,7 +4,8 @@
   "info": {
     "singularName": "career",
     "pluralName": "careers",
-    "displayName": "Career"
+    "displayName": "Career",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -26,12 +27,6 @@
     "imageUrl": {
       "type": "string"
     },
-    "industry": {
-      "type": "string"
-    },
-    "location": {
-      "type": "string"
-    },
     "position": {
       "type": "string"
     },
@@ -40,6 +35,18 @@
     },
     "term": {
       "type": "string"
+    },
+    "industry": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::industry.industry",
+      "inversedBy": "careers"
+    },
+    "locations": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::location.location",
+      "inversedBy": "careers"
     }
   }
 }
