@@ -36,16 +36,16 @@
     "term": {
       "type": "string"
     },
-    "industry": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::industry.industry",
-      "inversedBy": "careers"
-    },
     "locations": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::location.location",
+      "inversedBy": "careers"
+    },
+    "industries": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::industry.industry",
       "inversedBy": "careers"
     }
   }
